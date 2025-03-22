@@ -8,5 +8,5 @@ def ignore_specific_files(directory, files):                     # função que 
 
 
 # Copia o conteúdo de source_dir, ignorando o arquivo 'logs.txt', se a pasta 'dev_dir' não existir, ela será criada.
-shutil.copytree('source_dir', dst='dev_dir', ignore=ignore_specific_files, dirs_exist_ok=True)  
+shutil.copytree('source_dir', dst='ignore_dir', ignore=ignore_specific_files, dirs_exist_ok=True)  
 
