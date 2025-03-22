@@ -6,5 +6,7 @@ def ignore_specific_files(directory, files):                     # função que 
     print(f"Verificando pasta: {directory}, arquivos: {files}")  # imprime a pasta e os arquivos
     return [f for f in files if f == 'logs.txt']                 # retorna o arquivo 'logs.txt' se ele existir
 
-shutil.copytree('source_dir', dst='dev_dir', ignore=ignore_specific_files)  # copia o diretório 'source_dir' para 'dev_dir' ignorando o arquivo 'logs.txt'
+
+# Copia o conteúdo de source_dir, ignorando o arquivo 'logs.txt', se a pasta 'dev_dir' não existir, ela será criada.
+shutil.copytree('source_dir', dst='dev_dir', ignore=ignore_specific_files, dirs_exist_ok=True)  
 
